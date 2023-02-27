@@ -15,12 +15,12 @@ userForm.loginFormCallback = function(data) {
 }
 
 userForm.registerFormCallback = function(data) {
-    ApiConnector.login(
+    ApiConnector.register(
         data, (response) => {
             if (response.success) {
                 location.reload();
             } else {
-                this.setLoginErrorMessage(response.error);
+                this.setRegisterErrorMessage(response.error);
             }
         }
     )
